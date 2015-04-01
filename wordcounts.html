@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+  <title>WordCounts</title>
+  <script src="zepto.js"></script>
+  <link href="html5-doctor-reset-stylesheet.css" rel="stylesheet" type="text/css"/>
+  <link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<navbar></navbar>
+<div>
+  <grid></grid>
+</div>
+<script src="grid.tag" type="riot/tag"></script>
+<script src="navbar.tag" type="riot/tag"></script>
+<script src="riot@2.0.8(riot.min.js+compiler.min.js).js"></script>
+<script src="db.js"></script>
+<script src="gui.js"></script>
+<script src="api.js"></script>
+<script src="handlers.js"></script>
+<script>
+  Zepto(function($){
+    alert('ready')
+    
+    var db = new DB()
+    var gui = new GUI()
+    var api = new API(riot, db, gui)
+    var handlers = new Handlers(riot, api)
+    
+    riot.mount("grid", {db: db, gui: gui, api: api, handlers: handlers})
+    riot.mount("navbar", {api: api})
+    riot.update()
+    
+    alert('done')
+  })
+</script>
+</body>
+</html>

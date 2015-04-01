@@ -1,0 +1,210 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  background: url(gplaypattern.png) repeat;
+  margin-top: 3.6em;
+}
+
+table {
+  padding-top: 30px;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 20px;
+}
+
+#wordcountsgrid {
+  /*position: relative;*/
+  width: 100%;
+  max-height: 100%;
+  /*border: 5px solid red;*/
+}
+
+#leftpanel {
+  /*position: relative;*/
+  display: inline-block;
+  vertical-align: top;
+  width: 64%;
+  height: 100%;
+  padding: 1em;
+  /*border: 2px solid green;*/
+}
+
+#rightpanel {
+  /*position: relative;*/
+  display: inline-block;
+  vertical-align: top;
+  width: 34%;
+  max-height: 100%;
+  padding: 1em;
+  /*border: 2px solid blue;*/
+}
+
+.panel {
+  position: relative;
+  display: inline-block;
+  background-color: palegoldenrod;
+  width: 200px;
+  height: 180px;
+  margin: .5em;
+  border: 2px solid black;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  vertical-align: top;
+}
+
+#others {
+  width: 100%;
+  height: 600px;
+}
+
+#exclude {
+  width: 100%;
+  height: 350px;
+}
+
+#itemsothers {
+  position: absolute;
+  top: 28px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow-y: auto;
+}
+
+#itemsexclude {
+  position: absolute;
+  top: 28px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow-y: auto;
+}
+
+.panel.over {
+  border: 2px dashed black;
+}
+
+.disablepointerevents {
+  pointer-events: none;
+}
+
+.panelwide {
+  min-width: 180px;
+}
+
+.heading {
+  background-color: palegreen;
+  /*background-color: #000;
+  color: #86dc00;*/
+  /*background-color: #4598ef;
+  color: white;*/
+  margin: 0px;
+  padding: 5px;
+  font-weight: 700;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.items {
+  line-height: 2;
+  /*border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  margin-bottom: 5px;*/
+}
+
+.itemsdiv {
+  position: absolute;
+  top: 28px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow-y: auto;
+}
+
+.item {
+  margin: 10px;
+  padding: 2px 5px 2px 5px;
+  border: thin solid gray;
+  cursor: move;
+}
+
+.placeholder {
+  height: 3px;
+}
+
+/*.vscroll {
+  overflow-y: scroll;
+}*/
+
+/* NAV BAR*/
+.navbar{
+  position:fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 3.6em;
+  background:#000;
+  /*align-vertical: center;*/
+  /*color:#fff;*/
+  color: palegoldenrod;
+  z-index:1000;
+}
+
+.navbar span{
+  /*color:#86dc00;*/
+  color: palegreen;
+}
+
+.navbar ul{
+  display:inline-block;
+  margin:0;
+  padding:0;
+}
+
+.navbar li{
+  margin:0;
+  padding:0;
+  list-style-type:0;
+  display:inline-block;
+}
+
+.navbar li .navitem{
+  display:inline-block;
+  /*color:#efefef;*/
+  color: palegoldenrod;
+  padding:1em 1.3em;
+  text-decoration:none;
+  line-height:100%;
+  font-size: 1.2em;
+}
+
+.navbar li .navtext{
+  display:inline-block;
+  /*color:#efefef;*/
+  color: palegoldenrod;
+  padding:1em 1.3em;
+  text-decoration:none;
+  text-transform: uppercase;
+  line-height:100%;
+  font-size: 1.2em;
+}
+
+.clickable:hover {
+  background-color: gray;
+}
+
+/* prevent text selection in draggable elements */
+[draggable] {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  /* Required to make elements draggable in old WebKit */
+  -khtml-user-drag: element;
+  -webkit-user-drag: element;
+}
